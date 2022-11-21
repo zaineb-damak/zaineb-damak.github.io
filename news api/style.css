@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-image: url("./img/book-bg.jpg");
+    background-color:#deebfb;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#title{
+    color: #344059;
+}
+
+#header{
+    font-size: 3rem;
+}
+
+.book-list{
+    margin-top: 50px;
+    visibility: hidden;
+   
+}
