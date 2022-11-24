@@ -31,51 +31,109 @@
           .then(onTextReady);
 */
 const searchForm = document.querySelector('.search');
-      const input = document.querySelector('.input');
-      const newsList = document.querySelector('.news-list');
-   
-      searchForm.addEventListener('submit', retrieve);
-   
-      function retrieve(e){
-   
-       if(input.value == ''){
-         alert('input field is empty');
-         return;
-       }
-   
-       newsList.innerHTML="";
-   
-       e.preventDefault();
-       
-       const apiKey = 'e8e568478cb14de196cafcdb762c8bf6';
+const input = document.querySelector('.input');
+const newsList = document.querySelector('.news-list');
 
-       let topic = input.value;
-       console.log(topic);
-   
-       let url = 'https://newsapi.org/v2/everything?q='+topic+'&apiKey='+ apiKey;
-       console.log(url);
+searchForm.addEventListener('submit', retrieve);
 
-   
-       fetch(url).then((res)=>{
-         return res.json()
-         }).then((data)=>{
-           console.log(data);
-           data.articles.forEach(article =>{
-             let li = document.createElement('li');
-             let a = document.createElement('a');
-             a.setAttribute('href', article.url);
-             a.setAttribute('target', '_blank');
-             a.textContent = article.title;
-             li.appendChild(a);
-             newsList.appendChild(li)
-           })
-         }).catch((error)=>{
-           console.log(error);
-         })
+const newest = document.querySelector('.newest');
+let newestClicked = false;
+newest.addEventListener('click', function handleClicked() {
+    newestClicked = true;
+    console.log(newestClicked);
+});
 
-        
+const oldest = document.querySelector('.oldest');
+let oldestClicked = false;
+oldest.addEventListener('click',function handleClicked(){
+    oldestClicked = true;
+    console.log(oldestClicked);
+});
+
+const name1 = document.querySelector('.name');
+let nameClicked = false;
+name1.addEventListener('click',function handleClicked(){
+    nameClicked = true;
+    console.log(nameClicked);
+});
+
+
+function handleClicked(clicked){
+    clicked = true;
+    console.log(clicked);
+};
+
+function retrieve(e){
+
+if(input.value == ''){
+    alert('input field is empty');
+    return;
+}
+
+newsList.innerHTML="";
+
+e.preventDefault();
+
+const apiKey = 'e8e568478cb14de196cafcdb762c8bf6';
+
+let topic = input.value;
+console.log(topic);
+
+let url = 'https://newsapi.org/v2/everything?q='+topic+'&apiKey='+ apiKey;
+console.log(url);
+
+
+fetch(url).then((res)=>{
+    return res.json()
+    }).then((data)=>{
+    console.log(data);
+  /* if(newestClicked){
+        function insertionSort(articles){
+            //Start from the second element.
+            for(let i = 1; i < articles.length;i++){
+                //Go through the elements behind it.
+                for(let j = i - 1; j > -1; j--){
+                    //value comparison using ascending order.
+                    if(articles.publishedAt[j + 1] < articles.publishedAt[j]){
+                        //swap
+                        [articles.publishedAt[j+1],articles.publishedAt[j]] = [articles[j].publishedAt,articles.publishedAt[j + 1]];
+
+                    }
+                }
+            };  
+
+        return articles;
         }
-       
+        data.articles.forEach(article =>{
+        let li = document.createElement('li');
+        let a = document.createElement('a');
+        a.setAttribute('href', article.url);
+        a.setAttribute('target', '_blank');
+        a.textContent = article.title;
+        li.appendChild(a);
+        newsList.appendChild(li)
+    })
+
+    }*/
+    data.articles.forEach(article =>{
+        let li = document.createElement('li');
+        let a = document.createElement('a');
+        a.setAttribute('href', article.url);
+        a.setAttribute('target', '_blank');
+        a.textContent = article.title;
+        li.appendChild(a);
+        newsList.appendChild(li)
+    })
+    }).catch((error)=>{
+    console.log(error);
+    })
+
+
+}
+
+
+
+
 
 
        
