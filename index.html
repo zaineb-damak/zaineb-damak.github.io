@@ -9,20 +9,58 @@
 
     </head>
     <body>
+        <!-- cursor-->
+        <div class="cursor"></div>
+        <!-- end cursor -->
+        <!-- scroll to top button-->
+        <div class="scroll-top">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+            </svg>
+          </div>
+        <!-- end of scroll to top button-->
+        <!-- navigation section -->
+        <section id="navigation">
+            <div class="nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+            </div>
+        </section>
+        <section id="nav-content">
+            <div class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>                                  
+            </div>
+            <div class="wrapper">
+                <h2 class="section-heading" data-outline="Menu">Menu</h2>
+                <nav>
+                    <ul>
+                        <li><a data-text="Home" href="./index.html#hero">Home</a></li>
+                        <li><a data-text="About" href="./index.html#about">About</a></li>
+                        <li><a data-text="Projects" href="./index.html#projects">Projects</a></li>
+                        <li><a data-text="Contact" href="./contact.html">Contact</a></li>
+                </nav>
+            </div>
+        </section>
+        <!-- end of navigation section -->
         <!-- hero section -->
         <section id="hero">
             <div class="container">
                 <div class="left">
                     <p class="subheading"> I'm Zaineb</p>
                     <h2 class="heading">
-                        <div class="wrapper"><span>Pixels</span> </div>
-                        <div class="wrapper"><span>With</span> </div>
-                        <div class="wrapper"><span>purpose</span></div>
+                        <div class="wrapper"><span>Design</span> </div>
+                        <div class="wrapper"><span>Development</span> </div>
+                        <div class="wrapper"><span>Branding</span></div>
                     </h2>
-                    <p class="desc"> design, development, barnding </p>
+                    <p class="desc"> I work with companies and agencies around the world, building Web sites and application UIs with
+                        strong focus on
+                        responsive design, accessibility, performance </p>
                     <div class="buttons">
-                        <a href="a" class="primary-btn"> See My Works</a>
-                        <a href="a ">
+                        <a href="./index.html#projects" class="primary-btn"> See My Work</a>
+                        <a href="./index.html#projects">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
@@ -31,13 +69,151 @@
                     </div>
                 </div>
                 <div class="right">
-                    <img src="" alt="Zaineb">
-                </div>
-
+                    <img src="./image/profile.jpg" alt="Zaineb">
+                </div>  
             </div>
-
         </section>
         <!-- end hero section here -->
 
+        <!-- about section -->
+        <section  id="about">
+            <div class="container">
+                <h2 class="section-heading" data-outline="about"> About</h2>
+                <div class="wrapper">
+                    <div class="left">
+                        <div class="card">
+                            <div class="img">
+                                <img class="img" src="./image/profile.jpg" alt="">
+                            </div>
+                            <h3 class="card-name">Know more about me</h3>
+                            <p class="card-sub-title"></p>
+                            <p class="card-desc"> After studying Digital Design in London, I moved to Porto and became a freelance web designer and developer. <br>
+                                In my free time I enjoy reading, watching a good movie and practicing my bookbinding skills.
+                                </p>
+                        </div>
+                    </div>                    
+                    <div class="right">
+                        <p class="subheading"> Hi! This is Zaineb</p>
+                        <h2 class="slogan"> Freelancer Web Designer</h2>
+                        <p class="right-text">I design brand identities, mobile app UI & UX, design systems, websites and graphic design for advertising.
+
+                            My favourite tools for design and prototyping are Adobe XD, Figma, Webflow, Illustrator and Photoshop. <br>
+                            I don't just push pixels: design strategy, vision and forward-thinking are some of my most appreciated skills.</p>
+                        <div class="buttons">
+                            <a href="./CV zaineb damak.pdf" class="primary-btn"
+                            download> Download Resume</a>
+                            <a href="./contact.html" class="primary-btn outline"> Hire Me</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- end of about section-->
+
+        <!-- project section -->
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-heading" data-outline="Projects">Projects</h2>
+                <div class="all-items">
+                    <div class="item">
+                        <div class="left">
+                            <div class="img">
+                                <img src="./image/project-1.jpg" alt="">
+                            </div>                           
+                        </div>
+                        <div class="right">
+                            <h2 class="project-title">MyPoint</h2>
+                            <h3 class="project-sub-title">Project management tool</h3>
+                            <p class="project-desc">Mypoint is a project management tool and in 2018 they were looking for their new brand identity, UI & UX design to bring the platform to life.
+                                Also as an early stage start-up I designed a branded pitch deck to help them launch the product.</p>
+                            <div class="buttons">
+                                <a href="" class="primary-btn">Know More</a>
+                                <a href="" class="primary-btn outline">Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img">
+                                <img src="./image/project-2.jpg" alt="">
+                            </div>                            
+                        </div>
+                        <div class="right">
+                            <h2 class="project-title">MySoftware</h2>
+                            <h3 class="project-sub-title">Software Agency</h3>
+                            <p class="project-desc">In 2018 I worked as a Lead Designer with MySoftware, a software agency focused on launching new tech start-up companies.
+                               <br> For this project, they were looking for their Brand Identity and Web Design to represent them online and engage with their clients.</p>
+                            <div class="buttons">
+                                <a href="" class="primary-btn">Know More</a>
+                                <a href="" class="primary-btn outline">Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="left">
+                            <div class="img">
+                                <img src="./image/project-3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h2 class="project-title">MyShop</h2>
+                            <h3 class="project-sub-title">A website for selling handmade jewellery </h3>
+                            <p class="project-desc">MyShop is a website for a small business. The challenge was to create an aesthetic unique for this brand without overshadowing the jewellery.</p>
+                            <div class="buttons">
+                                <a href="" class="primary-btn">Know More</a>
+                                <a href="" class="primary-btn outline">Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of project section-->
+
+        <!-- footer section-->
+        <section id="footer">
+            <div class="container">
+                <footer>
+                    <div class="col-1">
+                        <a href=" " ></a>
+                    </div>
+                    <p>
+
+                    </p>
+                    <div class="col-2">
+                        <h2 class="column-heading">Important <br> Links</h2>
+                        <ul>
+                            <li><a href="./index.html#hero">Home</a></li>
+                            <li><a href="./index.html#about">About</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="./index.html#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h2 class="column-heading">Contact <br> Info</h2>
+                        <ul>
+                            <li><a href="mailto:damakzaineb@gmail.com">damakzaineb@gmail.com</a></li>
+                            <li><a href="#">+315000000000</a></li>
+                            <li><a href="#">Porto, Portugal</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h2 class="column-heading">Social <br> Links</h2>
+                        <ul>
+                            <li><a href="https://www.facebook.com/">FB</a></li>
+                            <li><a href="https://twitter.com/?lang=en">TW</a></li>
+                            <li><a href="https://www.instagram.com/">IG</a></li>
+                            <li><a href="https://www.linkedin.com/">LI</a></li>
+                        </ul>
+                    </div>
+                    
+
+                </footer>
+            </div>
+        </section>
+        <!--end of footer secttion-->
+
+      <script src="./main.js"></script>  
     </body>
 </html>
