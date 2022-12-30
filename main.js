@@ -43,3 +43,43 @@ if(scrollButton){
   document.addEventListener('mousemove', e =>{
     cursor.setAttribute("style", "top: " +(e.pageY-10)+"px; left: "+(e.pageX-10)+"px;");
   })
+
+  
+
+//paper-plane in contact2 page
+gsap.registerPlugin(MotionPathPlugin)
+
+const tl = gsap.timeline();
+tl.to('.paper-plane', {
+    duration: 5,
+    ease: "power1.inOut",
+    motionPath: {
+        autoRotate: true,
+        curviness: 2,
+        path: [
+            { x: 100, y: -20 },
+            { x: 300, y: 10 }, 
+            { x: 500, y: 100 },
+            { x: 750, y: -100 },
+            { x: 350, y: -50 },
+            { x: 600, y: 100 },
+            { x: 800, y: 0 },
+            { x: window.innerWidth, y: -250 }
+        ]}
+})
+
+// scroll magic
+const controller = new ScrollMagic.Controller();
+const scene = new ScrollMagic.Scene({
+    triggerElement: '.animation',
+    duration: 1000,
+    triggerHook: 0,
+})
+   .setTween(tl)
+   .addIndicators()
+   .setPin('.animation')
+   .addTo(controller)
+
+
+   //text animation
+   
